@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  frontend:
+    ports: 
+      - ${frontend_app_port}
+    volumes:
+      - ${frontend_app_dir}
+      - ${frontend_app_dir_node_modules}

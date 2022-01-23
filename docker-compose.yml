@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    container_name: ${frontend_app_container_name}
+    stdin_open: true
+    environment:
+      - NODE_ENV=development

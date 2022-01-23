@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      target: "dev-stage"
+    command: npm run dev
+    ports: 
+      - ${frontend_app_port}
+    volumes:
+      - ${frontend_app_dir}
+      - ${frontend_app_dir_node_modules}
+    environment:
+      - NODE_ENV=development
+
+networks:
+  default:
+    external:
+      name: development_environment
